@@ -28,7 +28,11 @@
 num = int(input('Введите количество монет: '))
 heads = 0 # орел 1
 tails = 0 # решка 0
+
 for i in range(num):
-        current_coin_status = int(input(f'Введите положение монеты {i} 0 или 1:  '))
+        current_coin_status = int(input(f'Введите положение монеты {i+1} - 0 или 1:  '))
         if current_coin_status == 0: tails += 1
         if current_coin_status == 1: heads += 1
+
+min_remove_coins = min (heads, tails)
+print(f"Минимальное количество переворотов равно: {min_remove_coins}")
